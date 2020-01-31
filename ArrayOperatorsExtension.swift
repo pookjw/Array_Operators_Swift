@@ -1,5 +1,3 @@
-import Foundation
-
 // Extension for Array where Element: Equatable
 extension Array where Element: Equatable {
     func intersection(_ arr: Array<Element>) -> Array<Element> {
