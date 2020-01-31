@@ -23,8 +23,11 @@ extension Array where Element: Equatable {
     }
     
     func symmetricDifference(_ arr: Array<Element>) -> Array<Element> {
-        var result: [Element] = self.union(arr)
+        var result = self + arr
         for a in self.intersection(arr) {
+            if let idx = result.firstIndex(of: a) {
+                result.remove(at: idx)
+            }
             if let idx = result.firstIndex(of: a) {
                 result.remove(at: idx)
             }
