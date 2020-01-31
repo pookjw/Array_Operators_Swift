@@ -5,7 +5,6 @@ extension Array where Element: Equatable {
     func intersection(_ arr: Array<Element>) -> Array<Element> {
         var result: [Element] = []
         var arr = arr
-        
         for a in self {
             for b in arr {
                 if a == b {
@@ -16,7 +15,6 @@ extension Array where Element: Equatable {
                 }
             }
         }
-        
         return result
     }
 
