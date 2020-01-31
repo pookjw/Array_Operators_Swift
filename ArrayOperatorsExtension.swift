@@ -4,18 +4,14 @@ extension Array where Element: Equatable {
         var result: [Element] = []
         var arr = arr
         for a in self {
-            for b in arr {
-                if a == b {
-                    if let idx = arr.firstIndex(of: a) {
-                        arr.remove(at: idx)
-                        result.append(a)
-                    }
-                }
+            if let idx = arr.firstIndex(of: a) {
+                arr.remove(at: idx)
+                result.append(a)
             }
         }
         return result
     }
-
+    
     func union(_ arr: Array<Element>) -> Array<Element> {
         var result = self + arr
         for a in self.intersection(arr) {
