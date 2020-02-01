@@ -47,8 +47,8 @@ extension Array where Element: Equatable {
 }
 
 // Test
-var a = [1, 2, 3, 4, 5, 5, 5]
-var b = [4, 5, 5, 3, 8, 9]
+let a = [1, 2, 3, 4, 5, 5, 5]
+let b = [4, 5, 5, 3, 8, 9]
 
 print(a.intersection(b)) // [3, 4, 5, 5]
 print(a.symmetricDifference(b)) // [1, 2, 5, 8, 9]
